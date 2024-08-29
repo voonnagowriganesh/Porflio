@@ -1,0 +1,251 @@
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+header {
+    background-color: rgb(76, 187, 23);
+    color: #fff;
+    padding: 10px 20px; /* Reduce padding for a smaller header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    margin: 10;
+    font-size: 25px; /* Adjust logo text size */
+    text-shadow: 0 0 15px white, 0 0 20px white, 0 0 20px red;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav a {
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px; /* Create space around the links */
+    font-size: 18px; /* Increase text size */
+    border: 2px solid transparent; /* Initial border for button effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+header nav a:hover {
+    background-color: red;
+    color: aliceblue; /* Opposite color effect on hover */
+    border-color: #f0f0f0; /* Border matches background */
+    transform: scale(1.1);
+}
+
+.gallery, .gallery1 {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 950px;
+}
+
+.gallery1 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 500px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow for all cards */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: rgb(24, 247, 135);
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.close {
+    position: absolute; /* Absolute positioning within the modal-content */
+    top: 10px; /* Distance from the top of the modal-content */
+    right: 10px; /* Distance from the right of the modal-content */
+    background-color: rgb(104, 237, 22);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Increase width to accommodate larger text */
+    height: 40px; /* Increase height to match width */
+    text-align: center; /* Center text horizontally */
+    line-height: 40px; /* Center text vertically */
+    cursor: pointer;
+    font-size: 40px; /* Adjust font size to fit within button */
+    display: flex;
+    align-items: center; /* Center align text vertically using flexbox */
+    justify-content: center; /* Center align text horizontally using flexbox */
+}
+
+.close:hover {
+    background-color: rgb(4, 128, 37);
+}
+
+embed {
+    width: 100%; /* Set to full width of the modal */
+    height: 80vh; /* Set the height to 80% of the viewport height */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.h1 {
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(34, 176, 15);
+}
+
+footer {
+    background-color: rgb(76, 187, 23); /* Matching header color */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: auto;
+}
+
+.neon {
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 20px red;
+}
+
+.active {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery, .gallery1 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .gallery-item {
+        margin: 5px;
+    }
+
+    embed {
+        width: 100%; /* Set to full width of the modal */
+        height: auto; /* Set the height to 80% of the viewport height */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 25px;
+    }
+
+    header nav a {
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust padding for smaller screens */
+    }
+
+    header nav ul li a {
+        padding: 8px 10px; /* Reduce padding for smaller screens */
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .gallery, .gallery1 {
+        grid-template-columns: 1fr;
+    }
+
+    embed {
+        width: 100%; /* Set to full width of the modal */
+        height: auto; /* Set the height to 80% of the viewport height */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    header nav a {
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust padding for smaller screens */
+    }
+
+}

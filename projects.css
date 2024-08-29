@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+header {
+    background-color: rgb(76, 187, 23); /* Matching header color */
+    color: #fff;
+    padding: 10px 20px; /* Reduce padding for a smaller header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.logo h1 {
+    margin: 10;
+    font-size: 40px;
+    text-shadow: 0 0 15px white, 0 0 20px white, 0 0 20px red;
+     /* Adjust logo text size */
+}
+
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remove margin */
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content:center; /* Allow items to wrap on smaller screens */
+}
+
+header nav a {
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px; /* Create space around the links */
+    font-size: 18px; /* Increase text size */
+    border: 2px solid transparent; /* Initial border for button effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+header nav a:hover {
+    background-color: red;
+    color: aliceblue; /* Opposite color effect on hover */
+    border-color: #f0f0f0; /* Border matches background */
+    transform: scale(1.1);
+}
+
+.main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-card:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-title {
+    font-size: 1.6em;
+    color: #4cbb17;
+}
+
+.project-association {
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.view-details-btn {
+    background-color: rgb(76, 187, 23);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+    background-color: rgb(149, 246, 23);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    position: relative; /* Ensures the close button is positioned relative to this container */
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content button {
+    background-color: rgb(76, 187, 23);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: rgb(50, 150, 20);
+}
+
+.close {
+    position: absolute; /* Absolute positioning within the modal-content */
+    top: 10px; /* Distance from the top of the modal-content */
+    right: 10px; /* Distance from the right of the modal-content */
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Increase width to accommodate larger text */
+    height: 40px; /* Increase height to match width */
+    text-align: center; /* Center text horizontally */
+    line-height: 40px; /* Center text vertically */
+    cursor: pointer;
+    font-size: 40px; /* Adjust font size to fit within button */
+    display: flex;
+    align-items: center; /* Center align text vertically using flexbox */
+    justify-content: center; /* Center align text horizontally using flexbox */
+}
+
+h2 {
+    font-size: 2.2em;
+    margin: 0 0 20px 0; /* Reduce bottom margin for better alignment */
+    text-align: center;
+    color: rgb(82, 195, 11); /* Match header color */
+    text-decoration: underline;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    background-color: rgb(76, 187, 23); /* Matching header color */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.neon {
+    text-shadow: 0 0 10px white, 0 0 20px white,0 0 20px red;
+}
+
+.active{
+    color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 20px; /* Adjust logo text size for smaller screens */
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 25px;
+    }
+
+    header nav a {
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust padding for smaller screens */
+    }
+
+    header nav ul li a {
+        padding: 8px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .project-card {
+        width: 100%; /* Full width for small screens */
+        max-width: 300px; /* Max width to prevent stretching */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 18px; /* Further reduce logo text size for very small screens */
+    }
+
+    header nav a {
+        font-size: 14px; /* Further reduce link text size */
+        padding: 6px 12px; /* Further adjust padding */
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 280px; /* Max width for very small screens */
+    }
+
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+    }
+
+    .close {
+        font-size: 30px; /* Reduce font size for close button on smaller screens */
+        width: 35px;
+        height: 35px;
+    }
+
+    h2 {
+        font-size: 1.8em; /* Reduce heading size for smaller screens */
+    }
+}

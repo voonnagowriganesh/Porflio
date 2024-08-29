@@ -1,0 +1,163 @@
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+header {
+    background-color: rgb(76, 187, 23); /* Matching header color */
+    color: #fff;
+    padding: 10px 20px; /* Reduce padding for a smaller header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.logo h1 {
+    margin: 10;
+    font-size: 25px;
+    flex-wrap: wrap; /* Adjust logo text size */
+
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px; /* Create space around the links */
+    font-size: 18px; /* Increase text size */
+    border: 2px solid transparent; /* Initial border for button effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+header nav a:hover {
+    background-color: red;
+    color: aliceblue; /* Opposite color effect on hover */
+    border-color: #f0f0f0; /* Border matches background */
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 230px;
+    padding: 5px;    
+    transition: background-color 0.3s ease;
+}
+
+.skill-card:hover {
+    background-color: #a9e4674f; /* Change to a light grey color or any other color */
+    transform: scale(1.1);
+}
+.card-img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0px;
+
+}
+
+.card-title {
+    font-size: 1.8em;
+    color: #4cbb17; /* Match header color */
+    margin: 0px 0;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #333;
+}
+
+footer {
+    background-color: rgb(76, 187, 23); /* Matching header color */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+
+h2 {
+    font-size: 2.2em;
+    margin: 0 0 20px 0; /* Reduce bottom margin for better alignment */
+    text-align: center;
+    color: rgb(31, 149, 13); /* Match header color */
+    text-decoration: underline;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.card-title:hover{
+    transform: scale(1.1);
+    
+    color: rgb(194, 14, 14);
+
+}
+
+
+.neon {
+    text-shadow: 0 0 10px white, 0 0 20px white,0 0 20px red;
+}
+
+.active{
+    color: red;
+
+}
+
+@media (max-width: 768px) {
+
+
+header nav ul {
+    flex-direction:row;
+    align-items: center;
+
+}
+
+header nav ul li {
+    margin-bottom: 25px;
+    text-align: center; /* Add space between items on smaller screens */
+}
+
+header nav a {
+    padding: 6px 14px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+header nav ul li a {
+    padding: 8px 10px; /* Reduce padding for smaller screens */
+}
+}

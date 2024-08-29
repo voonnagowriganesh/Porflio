@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <link rel="stylesheet" href="certificates.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="neon">My Portflio</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>&nbsp;&nbsp;
+                <li><a href="about.html" >About</a></li>&nbsp;&nbsp;
+                <li><a href="skills.html" >Skills</a></li>&nbsp;&nbsp;
+                <li><a href="projects.html">Projects</a></li>&nbsp;&nbsp;
+                <li><a href="certificates.html" class="active">Certifications</a></li>&nbsp;&nbsp;
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="h1">
+     <h1>Course Certifications</h1>   </div>
+    <section class="gallery">
+        <div class="gallery-item" onclick="openModal('modal1')">
+            <img src="Internshala.jpg" alt="Programming with Python">
+            <div class="overlay">
+                <div class="text">Programming with Python<br>Internshala</div>
+            </div>
+        </div> 
+        <div class="gallery-item" onclick="openModal('modal2')">
+            <img src="JPMorgan.jpeg" alt="Agile Job Simulation">
+            <div class="overlay">
+                <div class="text">Agile Job Simulation<br>JP Morgan</div>
+            </div>
+        </div>
+        
+        <div class="gallery-item" onclick="openModal('modal3')">
+            <img src="hackerrank.png" alt="Hackerrank">
+            <div class="overlay">
+                <div class="text">Python Basic<br>Hackerrank</div>
+            </div>
+        </div>
+        
+        <div class="gallery-item" onclick="openModal('modal4')">
+            <img src="tcs-ion-social-preview.png" alt="TCS-ION">
+            <div class="overlay">
+                <div class="text">TCS iON Career Edge - Young Professional<br>TCS-ION</div>
+            </div>
+        </div>
+        <!-- Add more gallery items here -->
+    </section>
+    <div class="h1"><h1>Internship Certifications</h1></div>
+    <section class="gallery1">
+        <div class="gallery-item" onclick="openModal('modal5')">
+            <img src="WebStack.jpg" alt="TCS-ION">
+            <div class="overlay">
+                <div class="text">Full Stack Web Development in MERN<br>WebStack Academy</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal('modal6')">
+            <img src="Data_Valley.png" alt="TCS-ION">
+            <div class="overlay">
+                <div class="text">Data Science Internship Certificate<br>Data_Valley</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for detailed view -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span> <!-- Close Button -->
+            <embed src="./Programming with Python Training - Certificate of Completion.pdf" type="application/pdf" width="100%" height="600px">
+            <p><strong>Programming with Python</strong><br>Issued by: Internshala<br>Completion Date: 24/06/24</p>
+            
+        </div>
+    </div>
+    
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <!-- Close Button -->
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+    
+            <!-- PDF Embed -->
+            <embed src="./Agile Job Simulation.pdf" type="application/pdf" width="100%" height="600px">
+    
+            <!-- Certificate Details -->
+            <p><strong>Agile Job Simulation</strong><br>Issued by: JP Morgan<br>Completion Date: 15/07/24</p>
+            
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <!-- Close Button -->
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+    
+            <!-- PDF Embed -->
+            <img src="Hacker_Rank_Python.png" type="application/png" width="100%" height="600px">
+    
+            <!-- Certificate Details -->
+            <p><strong>Python(Basic)</strong><br>Issued by: Hackerrank<br>Completion Date: 22/05/24</p>
+            
+        </div>
+    </div>
+    
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span> <!-- Close Button -->
+            <embed src="voonna_gowriganesh_tcs.pdf" type="application/pdf" width="100%" height="600px">
+            <p><strong>TCS iON Career Edge - Young Professional</strong><br>Issued by: TCS-ION<br>Completion Date: 16/05/24</p>
+            
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span> <!-- Close Button -->
+            <embed src="wsa_internship_certificate_VoonnaGowriganesh.pdf" type="application/pdf" width="100%" height="600px">
+            <p><strong>Full Stack Web Development using MERN</strong><br>Issued by: WebStack Academy<br>Completion Date: 16/10/23</p>
+            
+        </div>
+    </div>
+    
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span> <!-- Close Button -->
+            <embed src="Data_Valley_Internship.pdf" type="application/pdf" width="100%" height="600px">
+            <p><strong>Data Science Internship</strong><br>Issued by: Data Valley<br>Completion Date: 30/04/24</p>
+            
+        </div>
+    </div>
+    <!-- Add more modals here -->
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Voonna Gowri Ganesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="certificates.js"></script> <!-- Link to your JS file -->
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css"> <!-- Link to your stylesheet -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 style="font-size: 1.5em" class="neon">PROJECTS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>&nbsp;&nbsp;
+                <li><a href="about.html">About</a></li>&nbsp;&nbsp;
+                <li><a href="skills.html">Skills</a></li>&nbsp;&nbsp;
+                <li><a href="projects.html" class="active">Projects</a></li>&nbsp;&nbsp;
+                <li><a href="certificates.html">Certifications</a></li>&nbsp;&nbsp;
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br/>
+    <br/>
+    <h2>Projects</h2>
+    <main>
+        <div class="card-container">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openModal('project1')">
+                <img src="FANTASY-CRICKET.jpg" alt="Project 1" class="project-img">
+                <h2 class="project-title">Fantacy Cricket Team Builder</h2>
+                <p class="project-association">In Association with Internshala</p>
+                <button class="view-details-btn">View Details</button>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openModal('project2')">
+                <img src="crime.jpg" alt="Project 2" class="project-img">
+                <h2 class="project-title">Crime Data Analysis Using Machine Learning</h2>
+                <p class="project-association">In Association with S.R.K Institute of Technology</p>
+                <button class="view-details-btn">View Details</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Project Details -->
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('project1')">&times;</button>
+            <h2>Project 1</h2>
+            <p><strong>Description:</strong><br/> Created a Fantasy Cricket Team Builder application with a comprehensive GUI for users to create, save, open, and evaluate fantasy cricket teams.</p>
+            <p>Enhanced user engagement by incorporating a points system and real-time player statistics using SQLite, leading to a more interactive and dynamic user experience.</p>
+            <p><strong>Tech Stack Used:</strong>Python, PyQt5, SQLite.</p>
+            <p><a href="https://github.com/voonnagowriganesh/Fantasy-Cricket-Team-Builder" target="_blank">Github Source</a></p>
+            <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7211629092670984192/" target="_blank">LinkedIn Post</a></p>
+            <button onclick="window.location.href='mailto:voonnagowriganesh@gmail.com'">Reach Out to Me</button>
+        </div>
+    </div>
+
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('project2')">&times;</button>
+            <h2>Project 2</h2>
+            <p><strong>Description:</strong><br/> Developed a web application to predict crime occurrences based on uploaded CSV datasets using machine learning techniques.</p>
+            <p>Improved prediction accuracy from 56% to 87% through effective data preprocessing and optimization using the KNN algorithm.</p>
+            <p><strong>Tech Stack Used:</strong> Python, Flask, Pandas, Numpy, scikit-learn,HTML & CSS, JavaScript.</p>
+            <p><a href="https://github.com/voonnagowriganesh/Crime-Data-Analyisis-using-Machine-Learning" target="_blank">Github Source</a></p>
+            <p><a href="https://www.linkedin.com/in/voonna-gowri-ganesh/details/projects/" target="_blank">LinkedIn Post</a></p>
+            <p><a href="https://www.ijesat.com/ijesat/files/V24I0423_1714319070.pdf" target="_blank">Published_Paper</a></p>
+            <button onclick="window.location.href='mailto:voonnagowriganesh@gmail.com'">Reach Out to Me</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Voonna Gowri Ganesh. All rights reserved.</p>
+        </div>
+    </footer>
+</center>
+    <script src="project.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
